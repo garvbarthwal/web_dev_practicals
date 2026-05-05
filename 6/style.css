@@ -1,0 +1,10 @@
+form{
+    background-color:aliceblue;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+header{
+    background-color:lightblue;
+    margin: 20px;
+    padding: 5px;
+    text-align:center;
+}

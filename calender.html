@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender 2</title>
+    <style>
+        body {
+                background: linear-gradient(to right, #4e73df, #1cc88a);
+                text-align: center;
+                padding: 30px;
+                color: #333;
+            }
+        h2{
+              margin-bottom:20px ;
+              color: black
+        }
+        #months{
+            border:2px solid black;
+            padding:10px;
+            margin-bottom: 20px;
+        }
+        #years{
+            border:2px solid black;
+            padding:10px;
+            margin-bottom: 20px;
+
+        }
+        table{
+            border-collapse: collapse;
+            background-color: white;
+            align-items: center;
+            margin:20px auto
+        }
+        th {
+                background-color: #4e73df;
+                color: white;
+                padding: 10px;
+                }
+                td {
+                    padding: 10px;
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid #f3f0f0;
+                }
+                tr:nth-child(even) td {
+                    background-color: #f0f8ff; /* Light blue */
+                }
+                tr:nth-child(odd) td {
+                    background-color: #fff5e6; /* Light orange */
+                }
+                tr td:hover {
+                    background-color: #1cc88a;
+                    color: white;
+                    cursor: pointer;
+                }
+    </style>
+</head>
+<body>
+    <h2>
+        Calender
+    </h2>
+    <select name="month" id="months" onChange="getCalender()">
+        <option value="0">January</option>
+        <option value="1">February</option>
+        <option value="2">March</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+    </select>
+
+    <select name="year" id="years" onchange="getCalender()">
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+    </select>
+
+    <table id="calender"></table>
+
+    <script>
+        function getCalender(){
+            let cal="<tr>";
+            let m=document.getElementById("months").value
+            let year=document.getElementById("years").value
+
+            let fd=new Date(year,m,1).getDay();
+            let total=new Date(year,m+1,0).getDate()
+
+            let days=["Sun","Mon","Tue","Wed","Thurs","Fri","Sat"]
+            for(let i=0;i<7;i++){
+                cal+="<th>"+days[i]+"</th>"
+            }
+            cal+="</tr><tr>"
+            for(let i=0;i<fd;i++){
+                cal+="<td></td>"
+            }
+            
+            for(let d=1;d<=total;d++){
+                cal+="<td>"+d+"</td>"
+                if((fd+d) %7 == 0){
+                    cal+="<tr>"
+                }
+            }
+
+            cal+="</tr>"
+            document.getElementById("calender").innerHTML=cal
+            console.log(cal)
+        }
+        
+        getCalender();
+    </script>
+</body>
+</html>

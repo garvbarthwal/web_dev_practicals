@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin-top: 80px;
+            background: #f5f7fa;
+        }
+
+        header {
+            text-align: right;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px 40px;
+            margin: 25px 0;
+            font-size: 15px;
+        }
+
+        .details p {
+            margin: 0;
+        }
+
+        .details span {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 18px;
+            background: #184784;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: #0a2249;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="geuLogo.png" alt="Logo" style="height:110px; float:left;">
+        <h2>ADMIT CARD</h2>
+        <h3>EXAM EVEN SEM FEB-2026</h3>
+    </header>
+
+    <div class="details">
+        <p><span>Name:</span> Garv Barthwal</p>
+        <p><span>Program:</span> Bachelor of Technology</p>
+        <p><span>Branch:</span> CSE</p>
+
+        <p><span>Father's Name:</span> Ajay Barthwal</p>
+        <p><span>Semester:</span> 6</p>
+        <p><span>Sec:</span> CSE-A</p>
+
+        <p><span>Student ID:</span> 230211565</p>
+        <p><span>Roll No:</span> 2023355</p>
+        <p><span>Enrollment No:</span> GE-232023355</p>
+    </div>
+
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Subject Type</th>
+            <th>Subject Code</th>
+            <th>Subject Name</th>
+            <th>Exam Date</th>
+            <th>Exam Time</th>
+            <th>Status</th>
+            <th>Invigilator Sign.</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Theory</td>
+            <td>TCS 614</td>
+            <td>Computer Networks-II(S)</td>
+            <td>24-02-2026</td>
+            <td>11:00 AM - 12:30 PM</td>
+            <td>Eligible</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Theory</td>
+            <td>TCS 691</td>
+            <td>Image processing and computer vision(S)</td>
+            <td>25-02-2026</td>
+            <td>11:00 AM - 12:30 PM</td>
+            <td>Eligible</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Theory</td>
+            <td>XCS 601</td>
+            <td>Career Skills(S)</td>
+            <td>25-02-2026</td>
+            <td>11:00 AM - 12:30 PM</td>
+            <td>Eligible</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Theory</td>
+            <td>TCS 611</td>
+            <td>Software Engineering(S)</td>
+            <td>27-02-2026</td>
+            <td>11:00 AM - 12:30 PM</td>
+            <td>Eligible</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Practical</td>
+            <td>PCS 601</td>
+            <td>Compiler Design Lab(L)</td>
+            <td>9-03-2026</td>
+            <td>1:00 PM - 3:00 PM</td>
+            <td>Eligible</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Practical</td>
+            <td>PCS 611</td>
+            <td>Software Engineering Lab(L)</td>
+            <td>11-03-2026</td>
+            <td>8:00 AM - 10:00 AM</td>
+            <td>Eligible</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Practical</td>
+            <td>PCS 693</td>
+            <td>Web Development Lab(L)</td>
+            <td>12-03-2026</td>
+            <td>1:00 PM - 3:00 PM</td>
+            <td>Eligible</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h3><u>Important Instructions</u></h3>
+
+    <ul>
+        <li>Carry this admit card along with a valid ID proof to the examination center.</li>
+        <li>Reach the examination center at least 15 minutes before the scheduled time.</li>
+        <li>Ensure that you have all the necessary stationery and materials required for the exam.</li>
+        <li>Students must ensure that they fill correct information in their answer booklets.</li>
+        <li>Any form of malpractice or misconduct will lead to be charged with UFM.</li>
+    </ul>
+
+    <button onclick="window.print()">Print Admit Card</button>
+    <button onclick="window.close()">Close</button>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            border: 2px rgba(0, 0, 0, 0.85) solid;
+            width: 320px;
+            background-color: white;
+            padding-bottom: 15px;
+        }
+        marquee{
+            background-color: #0d47a1;
+            color: white;
+            padding: 6px;
+            font-weight: bold;
+        }
+        .logo{
+            background-color: white;
+            text-align: center;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid #ccc;
+        }
+        .logo img{
+            height: 60px;
+        }
+        form{
+            padding: 10px 20px;
+        }
+        input{
+            width: 100%;
+            height: 20px;
+        }
+        select{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <marquee>
+            Graphic Era University | Dehradun, Uttarakhand
+        </marquee>
+        <div class="logo">
+            <img src="./geuLogo.png" alt="College Logo">
+        </div>
+        <form>
+            <label>Student Name</label><br>
+            <input type="text" required placeholder="Garv">
+            <br><br>
+            <label>University Mail Id</label><br>
+            <input type="email" required placeholder="student@geu.ac.in">
+            <br><br>
+            <label>Roll Number</label><br>
+            <input type="number" required placeholder="230211565">
+            <br><br>
+            <label>Course</label><br>
+            <select required>
+                <option>B.Tech</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>B.Com</option>
+            </select>
+            <br><br>
+            <label>Age</label><br>
+            <input type="number" min="18" max="30" placeholder="21">
+            <br><br>
+            <label>Gender</label><br>
+            <input type="radio" name="gender" required> Male
+            <input type="radio" name="gender"> Female
+            <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
