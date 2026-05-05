@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stopwatch</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #dce8f5, #e8e0f0);
+      display: flex; justify-content: center; align-items: center; min-height: 100vh;
+    }
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 3rem;
+      display: flex; flex-direction: column; align-items: center; gap: 2rem;
+      width: 460px;
+      box-shadow: 0 20px 60px rgba(100,120,200,0.15);
+    }
+    .label {
+      font-size: 12px; font-weight: 600; color: #999;
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+    .display-box {
+      background: #f7f8ff; border-radius: 14px;
+      padding: 2rem; width: 100%; text-align: center;
+    }
+    #display {
+      font-size: 56px; font-weight: 500;
+      font-family: monospace; color: #1a1a2e; letter-spacing: 4px;
+    }
+    .btns { display: flex; gap: 12px; width: 100%; }
+    button {
+      padding: 14px; font-size: 16px; font-weight: 500;
+      border: 1.5px solid #e0e0e0; border-radius: 10px;
+      background: #fff; cursor: pointer; transition: background 0.2s;
+    }
+    #startStop { flex: 2; background: #5a67d8; color: #fff; border-color: #5a67d8; }
+    #startStop:hover { background: #434190; }
+    #resetBtn { flex: 1; }
+    #resetBtn:hover { background: #f0f0f0; }
+  </style>
+</head>
+<body>
+<div class="card">
+  <p class="label">Stopwatch</p>
+  <div class="display-box">
+    <div id="display">00:00:00</div>
+  </div>
+  <div class="btns">
+    <button id="startStop" onclick="toggle()">Start</button>
+    <button id="resetBtn" onclick="reset()">Reset</button>
+  </div>
+</div>
+<script>
+  let ms = 0, interval = null;
+  function fmt(n) { return String(n).padStart(2, '0'); }
+  function tick() {
+    ms += 1000;
+    let h = Math.floor(ms / 3600000);
+    let m = Math.floor((ms % 3600000) / 60000);
+    let s = Math.floor((ms % 60000) / 1000);
+    document.getElementById('display').textContent = fmt(h)+':'+fmt(m)+':'+fmt(s);
+  }
+  function toggle() {
+    if (interval) { clearInterval(interval); interval = null; document.getElementById('startStop').textContent = 'Start'; }
+    else { interval = setInterval(tick, 1000); document.getElementById('startStop').textContent = 'Stop'; }
+  }
+  function reset() {
+    clearInterval(interval); interval = null; ms = 0;
+    document.getElementById('display').textContent = '00:00:00';
+    document.getElementById('startStop').textContent = 'Start';
+  }
+</script>
+</body>
+</html>

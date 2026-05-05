@@ -41,7 +41,7 @@
 - [x] Create calendar for month & year using combo box
 
 ## 11. Stopwatch
-- [ ] Create a stopwatch
+- [x] Create a stopwatch
 
 ## 12. PHP Basics
 - [ ] Simple operations using PHP
