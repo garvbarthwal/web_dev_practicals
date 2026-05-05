@@ -47,10 +47,11 @@
 - [ ] Simple operations using PHP
 
 ## 13. Swap Without Third Variable
-- [ ] Swap two numbers without using third variable
+- [x] Swap two numbers without using third variable
 
 ## 14. Swap Using PHP
-- [ ] Write a PHP program to swap two numbers
+- [x] Design a PHP program to create a user registration form that accepts Name, Username, Password, Age and Branch using the POST method. Demonstrate the variable function: gettype (), settype (), isset (), and unset().
+
 
 ## 15. Login System
 - [x] Create login page using session variables
