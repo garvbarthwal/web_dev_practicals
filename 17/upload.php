@@ -45,17 +45,7 @@ if (isset($_FILES["file"])){
 <html>
 <head>
 <title>File Upload</title>
-<style>
-body{ font-family: Arial, sans-serif; background: #284e54; margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center; }
-.card{ background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 320px; text-align: center; }
-h2{ margin-bottom: 20px; }
-input[type="file"]{ width: 100%; padding: 8px; margin-bottom: 15px; }
-button{ width: 100%; padding: 10px; background: #2980b9; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; transition: 0.3s; }
-button:hover{ background: #1f6692; }
-.message{ margin-bottom: 15px; padding: 10px; border-radius: 6px; font-size: 14px; }
-.success{ background: #d4edda; color: #155724; }
-.error{ background: #f8d7da; color: #721c24; }
-</style>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <div class="card">
