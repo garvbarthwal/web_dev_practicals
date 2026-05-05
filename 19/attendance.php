@@ -1,25 +1,26 @@
 <?php
-$filename = "attendance.txt";
+$filename = __DIR__ . "/attendance.txt";  // ✅ absolute path
 $message = "";
 
-if(isset($_POST['submit'])) {
-    $roll = trim($_POST['roll']);
-    $name = trim($_POST['name']);
+if (isset($_POST['submit'])) {
+    $roll   = trim($_POST['roll']);
+    $name   = trim($_POST['name']);
     $status = trim($_POST['status']);
-    if($roll != "" && $name != "") {
+
+    if ($roll != "" && $name != "") {
         $data = "$roll - $name - $status\n";
-        file_put_contents($filename, $data, FILE_APPEND);
-        $message = "Record added successfully!";
+        if (file_put_contents($filename, $data, FILE_APPEND) !== false) {
+            $message = "Record added successfully!";
+        } else {
+            $message = "Error: Could not write to file. Check permissions.";
+        }
     }
 }
 
-$total = 0;
+$total   = 0;
 $present = 0;
-$absent = 0;
-$lines = [];
-if(file_exists($filename)) {
-    $lines = file($filename);
-}
+$absent  = 0;
+$lines   = file_exists($filename) ? file($filename) : [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
