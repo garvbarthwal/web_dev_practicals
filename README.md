@@ -53,16 +53,16 @@
 - [ ] Write a PHP program to swap two numbers
 
 ## 15. Login System
-- [ ] Create login page using session variables
+- [x] Create login page using session variables
 
 ## 16. Cookies & Session Counter
-- [ ] PHP program to implement cookie and session-based counter
+- [x] PHP program to implement cookie and session-based counter
 
 ## 17. File Uploading
-- [ ] File uploading using PHP
+- [x] File uploading using PHP
 
 ## 18. Database Connection
-- [ ] PHP program to connect to a database
+- [x] PHP program to connect to a database
 
 ## 19. File Handling
-- [ ] File handling using PHP
+- [x] File handling using PHP
